@@ -1,0 +1,67 @@
+html{
+    background-color: deepskyblue;
+}
+header {
+    margin-bottom: 10px;
+}
+nav{
+    background-color: whitesmoke;
+    font-size: 30px;
+}
+main{
+    background-color: whitesmoke;
+    padding: auto;
+}
+main p{
+    font-size: 20px;
+    margin: 10px;
+}
+main .caption{
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+}
+main h3{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 30px;
+    padding: 0px;
+}
+main img{
+    width: 600px;
+}
+main .products{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+main .products img{
+    margin: 15px;
+    width: 300px;
+}
+footer{
+    margin: 0px;
+    background-color:whitesmoke;
+}
+footer p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+}
+ul{
+    font-size: 25px;
+}
+ul li img{
+    display: flex;
+    width: 300px;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+table,td,th{
+    border: 2px solid black;
+    margin-left: 5px;
+    width: 50%;
+    text-align: center;
+}
