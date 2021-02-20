@@ -65,10 +65,21 @@ main .products img{
     margin: 15px;
     width: 300px;
 }
+
 .filialsUl{
     display: flex;
     margin: auto;
-    padding-bottom: 1px;
+    padding-bottom: 10px;
+}
+.filialsImg img{
+    display: block;
+    margin: auto;
+    width: 450px;
+}
+.filialsImg{
+    display:block;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 footer{
     display: block;
