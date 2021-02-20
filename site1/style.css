@@ -66,7 +66,7 @@ main .products img{
     width: 300px;
 }
 .filialsUl{
-    display: block;
+    display: flex;
     margin: auto;
     padding-bottom: 1px;
 }
