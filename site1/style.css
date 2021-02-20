@@ -1,15 +1,38 @@
 html{
-    background-color: deepskyblue;
+    background-color: whitesmoke;
 }
 header {
     margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
 }
-nav{
-    background-color: whitesmoke;
-    font-size: 30px;
+
+nav {
+    height: 50px;
+    flex: 100%;
+    display: flex;
+    background-color: black;
+}
+
+nav ul {
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+}
+h3,p,li{
+    color: whitesmoke;
 }
 main{
-    background-color: whitesmoke;
+    background-color: black;
     padding: auto;
 }
 main p{
@@ -22,11 +45,10 @@ main .caption{
     padding: 5px;
 }
 main h3{
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: auto;
     text-align: center;
     font-size: 30px;
-    padding: 0px;
+    padding: 7px;
 }
 main img{
     width: 600px;
@@ -40,9 +62,15 @@ main .products img{
     margin: 15px;
     width: 300px;
 }
+.filialsUl{
+    display: block;
+    margin: auto;
+    padding-bottom: 1px;
+}
 footer{
-    margin: 0px;
-    background-color:whitesmoke;
+    display: block;
+    margin: auto;
+    background-color:black;
 }
 footer p{
     margin-top: 5px;
@@ -60,8 +88,23 @@ ul li img{
     margin-bottom: 10px;
 }
 table,td,th{
-    border: 2px solid black;
-    margin-left: 5px;
+    border: 2px solid whitesmoke;
+    margin: auto;
     width: 50%;
+    height: 100%;
     text-align: center;
+    color: whitesmoke;
+    padding: 3px;
+}
+.indexCenter{
+    margin: auto;
+}
+.indexCenter img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.aboutUl{
+    display: block;
+    padding-bottom: 1px;
 }
