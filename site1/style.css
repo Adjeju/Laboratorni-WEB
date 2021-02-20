@@ -20,7 +20,6 @@ nav ul {
     list-style-type: none;
     flex: 2;
     display: flex;
-    text-decoration: none;
 }
 
 nav li {
@@ -28,9 +27,13 @@ nav li {
     text-align: center;
     flex: 1;
 }
+nav a{
+    color: whitesmoke;
+}
 h3,p,li{
     color: whitesmoke;
 }
+
 main{
     background-color: black;
     padding: auto;
