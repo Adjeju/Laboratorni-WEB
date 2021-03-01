@@ -1,0 +1,126 @@
+html{
+    background-color: whitesmoke;
+}
+header {
+    margin-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+nav {
+    height: 50px;
+    flex: 100%;
+    display: flex;
+    background-color: black;
+}
+
+nav ul {
+    margin: auto;
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+}
+
+nav li {
+    display: inline;
+    text-align: center;
+    flex: 1;
+}
+nav a{
+    color: whitesmoke;
+}
+h3,p,li{
+    color: whitesmoke;
+}
+
+main{
+    background-color: black;
+    padding: auto;
+}
+main p{
+    font-size: 20px;
+    margin: 10px;
+}
+main .caption{
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+}
+main h3{
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    padding: 7px;
+}
+main img{
+    width: 600px;
+}
+main .products{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+main .products img{
+    margin: 20px;
+    width: 300px;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+.filialsUl{
+    display: flex;
+    margin: auto;
+    padding-bottom: 10px;
+}
+.filialsImg img{
+    display: block;
+    margin: auto;
+    width: 450px;
+}
+.filialsImg{
+    display:block;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+footer{
+    display: block;
+    margin: auto;
+    background-color:black;
+}
+footer p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 5px;
+}
+ul{
+    font-size: 25px;
+}
+ul li img{
+    display: flex;
+    width: 300px;
+    margin: 10px;
+    margin-bottom: 10px;
+}
+table,td,th{
+    border: 2px solid whitesmoke;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    color: whitesmoke;
+    padding: 3px;
+}
+.indexCenter{
+    margin: auto;
+}
+.indexCenter img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.aboutUl{
+    display: block;
+    padding-bottom: 1px;
+}
