@@ -62,8 +62,10 @@ main .products{
     flex-wrap:wrap;
 }
 main .products img{
-    margin: 15px;
+    margin: 20px;
     width: 300px;
+    border: 2px solid green;
+    border-radius: 20px;
 }
 
 .filialsUl{
