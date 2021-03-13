@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numOfCoins = prompt("Num: ")
+        let nominal = prompt("Nominal: ")
+        let sum = numOfCoins * nominal
+        let grn = parseInt(sum / 100)
+        let ost = sum - grn * 100
+        alert(`Grn = ${grn}, coins = ${ost}`)
+    </script>
+</body>
+</html>

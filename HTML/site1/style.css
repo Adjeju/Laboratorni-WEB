@@ -4,7 +4,8 @@ html{
 header {
     margin-bottom: 10px;
     display: flex;
-    flex-flow: row wrap;
+    position: sticky;
+    top: 0px;
 }
 
 nav {
@@ -64,8 +65,6 @@ main .products{
 main .products img{
     margin: 20px;
     width: 300px;
-    border: 2px solid green;
-    border-radius: 20px;
 }
 
 .filialsUl{

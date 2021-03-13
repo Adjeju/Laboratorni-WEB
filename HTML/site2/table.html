@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            display: flex;
+        }
+        .col33 {
+            width: 33%;
+            border: 1px solid black;
+            padding-left: 10px;
+
+        }
+        .col33 img{
+            width: 500px;
+        }
+        .right-container{
+            padding-left: 0px;
+        }
+        .col66{
+            width: 66%;
+            border: 1px solid black;
+            padding-left: 10px;
+        }
+        table, th, td {
+            border: 2px solid black;
+            text-align: center;
+        }
+        table{
+            width: 100%;
+        }
+        .rightSide{
+            border: 1px solid black;
+            height: 35%;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="block">
+        <div class="col33">
+            <h2>Sputniki</h2>
+            <ul>
+                <li>
+                    Земля
+                    <ol>
+                        <li>a</li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Земля
+                    <ol>
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Uran
+                    <ol>
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ol>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    Neptun
+                    <ol>
+                        <li>a</li>
+                        <li>b</li>
+                        <li>c</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="col33">
+            <p>Vibir stravi</p>
+            <select>
+                <optgroup label="ukr">
+                  <option>a</option>
+                  <option>b</option>
+                </optgroup>
+                <optgroup label="rus">
+                  <option>c</option>
+                  <option>d</option>
+                </optgroup>
+            </select>
+            <p>Price from <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> </p>
+            <p>Price from <input type="range" min="1" max="100" value="50" class="slider" id="myRange"> </p>
+        </div> 
+        <div class="col33 right-container">
+            <div class="rightSide">
+                <p>Drink</p>
+                <input type="radio">coffe <br>
+                <input type="radio">coffe <br>
+                <input type="radio">coffe <br>
+            </div>
+            <div class="rightSide">
+                <p>food</p>
+                <input type="radio">coffe <br>
+                <input type="radio">coffe <br>
+                <input type="radio">coffe <br>
+            </div>
+            <div class="rightSide">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="col66">
+            <img src="../dovidnik/img/peace.jpg" alt="">
+        </div>
+        <div class="col33 right-container">
+            <img src="../site1/img/bitcoin.png" alt="">
+        </div>
+    </div>
+    <div></div>
+</body>
+</html>
