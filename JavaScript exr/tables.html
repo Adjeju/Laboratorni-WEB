@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table td{
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let rows = parseInt(prompt("rows"))
+        let cols = parseInt(prompt("cols"))
+        function createRow(rows) {
+            document.write('<tr>')
+            for (let i = 0; i < rows; i++) {
+                document.write(`<td>${" "}</td>`)
+            }
+            document.write('</tr>')
+        }
+        function createTable(rows,cols) {
+            document.write('<table>')
+                for (let i = 0; i < cols; i++) {
+                    createRow(rows)
+                }
+            document.write('</table>')
+        }
+        createTable(rows,cols)
+    </script>
+</body>
+</html>

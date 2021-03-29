@@ -570,6 +570,85 @@
             < /html>
             </td>
         </tr>
+        <tr>
+            <td colspan="3">CSS</td>
+        </tr>
+        <tr>
+            <td colspan="3">Selectors</td>
+        </tr>
+        <tr>
+            <td colspan="2"> * { <br>
+                властивість1:значення1; <br>
+                 … <br>
+                властивістьN:значення; <br>
+                } <br>
+            </td>
+            <td>
+                *{ <br>
+                    border: 1px solid #000000; <br>
+                } <br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                ім’я тега { <br>
+                    властивість1:значення1; <br>
+                     … <br>
+                    властивістьN:значенняN;<br>
+                    } <br>
+          
+            </td>
+            <td>
+                
+                p { <br>
+                    text-align: justify;  <br>
+                    color: green; <br>
+                } <br>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                . Ім'я_класу{ <br>
+                    властивість1:значення1; <br>
+                     … <br>
+                    властивістьN:значення; <br>
+                } <br>
+          
+            </td>
+            <td>
+                
+            ------ У тексті HTML-сторінки ----- <br>
+            < h1 class="headline"> Зміст < /h1> <br>
+            < p  class="headline"> Важливий текст < /p> <br>
+            ------ У таблиці стилів CSS ---- <br>
+            .headline { <br>
+            text-transform: uppercase;  <br>
+            color: lightblue; <br>
+            }
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                # id елемента { <br>
+                    властивість1:значення1; <br>
+                     … <br>
+                    властивістьN:значенняN; <br>
+          }
+            </td>
+            <td>
+                ------ У тексті HTML-сторінки ----- br
+                < p id="first_line"> Зміст < /p> <br>
+                ------ У таблиці стилів CSS ---- <br>
+                #first_line { <br>
+                text-transform: uppercase;  <br>
+                color: lightblue; <br>
+                }
+
+            </td>
+        </tr>
+
     </table>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getRandomNumber(min, max){
+            let rand = Math.random() * (max - min) + min
+            return Math.round(rand)
+        }
+        function compare(playerChoise, computerChoise){
+            if(playerChoise == computerChoise) return 'It is tie'
+            if(playerChoise == 'r'){
+                if(computerChoise == 'p'){
+                    return 'Computer win'
+                }
+                else{
+                    return 'Player win'
+                }
+            }
+            if(playerChoise == 'p'){
+                if(computerChoise == 's'){
+                    return 'Computer win'
+                }
+                else{
+                    return 'Player win'
+                }
+            }
+            if(playerChoise == 's'){
+                if(computerChoise == 'r'){
+                    return 'Computer win'
+                }
+                else{
+                    return 'Player win'
+                }
+            }
+        }
+        alert("r p s")
+        let playersAns = prompt("Choose: ")
+        let compAns = getRandomNumber(1,4)
+        if(compAns == 1) compAns = 'r'
+        else if(compAns == 2) compAns = 'p'
+        else if(compAns == 3) compAns = 's'
+        alert(compare(playersAns,compAns))
+    </script>
+</body>
+</html>
