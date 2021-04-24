@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <label> First number
+    <input type="text" id="first-input"><br>
+  </label>
+  <label> Second number
+  <input type="text" id="second-input"><br>
+  </label>
+  <button id="add-button">Add</button>
+  <button id="substruct-button">Substract</button>
+  <button id="multiply-button">Multiply</button>
+  <button id="divide-button">Divide</button>
+  <hr>
+  <label>Result</label>
+  <input type="text" id="result-input">
+  <div id="container">
+    
+  </div>
+  <script>
+    const firstInput = document.getElementById('first-input')
+    const secondInput = document.getElementById('second-input')
+    const container = document.getElementById('container')
+
+    function AddNumbers(f,s,cont) {
+      let fisrtNumber = parseInt(f.value)
+      let secondNumber = parseInt(s.value)
+      let result = fisrtNumber + secondNumber
+      const resInput = document.getElementById('result-input')
+      resInput.value = result
+      const newDiv = document.createElement('div')
+      newDiv.innerText = `${fisrtNumber}+${secondNumber}=${result}`
+      cont.appendChild(newDiv)
+    }
+
+    function SubstractNumbers(f,s,cont) {
+      let fisrtNumber = parseInt(f.value)
+      let secondNumber = parseInt(s.value)
+      let result = fisrtNumber - secondNumber
+      const resInput = document.getElementById('result-input')
+      resInput.value = result
+      const newDiv = document.createElement('div')
+      newDiv.innerText = `${fisrtNumber}-${secondNumber}=${result}`
+      cont.appendChild(newDiv)
+    }
+
+    function MultiplyNumbers(f,s,cont) {
+      let fisrtNumber = parseInt(f.value)
+      let secondNumber = parseInt(s.value)
+      let result = fisrtNumber * secondNumber
+      const resInput = document.getElementById('result-input')
+      resInput.value = result
+      const newDiv = document.createElement('div')
+      newDiv.innerText = `${fisrtNumber}*${secondNumber}=${result}`
+      cont.appendChild(newDiv)
+    }
+
+    function DivideNumbers(f,s,cont) {
+      let fisrtNumber = parseInt(f.value)
+      let secondNumber = parseInt(s.value)
+      let result = fisrtNumber / secondNumber
+      const resInput = document.getElementById('result-input')
+      resInput.value = result
+      const newDiv = document.createElement('div')
+      newDiv.innerText = `${fisrtNumber}/${secondNumber}=${result}`
+      cont.appendChild(newDiv)
+    }
+
+    const addButton = document.getElementById('add-button')
+    addButton.onclick = () =>{
+      AddNumbers(firstInput, secondInput, container)
+    }
+
+    const substructButton = document.getElementById('substruct-button')
+    substructButton.onclick = () =>{
+      SubstractNumbers(firstInput, secondInput, container)
+    }
+
+    const multiplyButton = document.getElementById('multiply-button')
+    multiplyButton.onclick = () =>{
+      MultiplyNumbers(firstInput, secondInput, container)
+    }
+
+    const divideButton = document.getElementById('divide-button')
+    divideButton.onclick = () =>{
+      DivideNumbers(firstInput, secondInput, container)
+    }
+  </script>
+</body>
+</html>
