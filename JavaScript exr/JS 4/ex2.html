@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function less(arr) {
+            let days = []
+            arr.forEach((x,i,arr) => {
+                if(x < 20) days.push(i+1)
+            });
+            return days
+        }
+        function getMin(arr) {
+            let min = Math.min(...arr)
+            let days = []
+            arr.forEach((x,i,arr) => {
+                if(x == min) days.push(i + 1)
+            });
+            return days
+        }
+        function getMax(arr) {
+            let max = Math.max(...arr)
+            let days = []
+            arr.forEach((x,i,arr) => {
+                if(x == max) days.push(i + 1)
+            });
+            return days
+        }
+        function getAllPeople(arr) {
+            let all = 0
+            arr.forEach((x,i,arr) => {
+                all += x
+            });
+            return all
+        }
+        function getWeekend(arr) {
+            let weekend = 0
+            arr.forEach((x,i,arr) => {
+                if(i > 4) weekend+= x
+            });
+            return weekend
+        }
+        let arr = prompt("arr: ").split(" ").map((x,i,arr) => parseInt(x))
+        alert(less(arr))
+        alert(getMax(arr))
+        alert(getMin(arr))
+        alert(getAllPeople(arr))
+        alert(getWeekend(arr))
+    </script>
+</body>
+</html>

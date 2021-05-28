@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Test{
+            constructor(minValue, maxVelue){
+                this.minValue = minValue
+                this.maxVelue = maxVelue
+            }
+            getRandomNum(){
+                return this.minValue + Math.floor(Math.random() * (this.maxVelue - this.minValue + 1))
+            }
+            createDiv(labelName){
+                let div = document.createElement('div')
+                let label = document.createElement('label')
+                label.innerText = labelName
+                div.appendChild(label)
+                let input = document.createElement('input')
+                input.setAttribute("data-destiny", "calc-value")
+                div.appendChild(input)
+                return div
+            }
+            fillInputs(){
+                const inputCollection = document.querySelectorAll("[data-destiny=calc-value]")
+                for(let i = 0; i < inputCollection.length - 1; i++){
+                    inputCollection[i].value = this.getRandomNum()
+                }
+            }
+            calculateSum(){
+                let getSum = (prev, x, i, arr) =>{
+                    prev += x
+                    return prev
+                }
+                const inputCollection = document.querySelectorAll("[data-destiny=calc-value]")
+                let arr = []
+                for(let i = 0; i < inputCollection.length - 1; i++){
+                    arr.push(Number(inputCollection[i].value))
+                }
+                let sum = arr.reduce(getSum, 0)
+                inputCollection[3].value = sum
+            }
+            render(){
+                const mainDiv = document.querySelector("#container")
+                mainDiv.appendChild(this.createDiv("Num1: "))
+                mainDiv.appendChild(this.createDiv("Num2: "))
+                mainDiv.appendChild(this.createDiv("Num3: "))
+
+                let div = document.createElement('div')
+                let btn = document.createElement('button')
+                btn.onclick = this.calculateSum.bind(this)
+                btn.innerText = "Sum"
+                mainDiv.appendChild(btn)
+
+                mainDiv.appendChild(this.createDiv("Sum: "))
+                this.fillInputs()
+            }
+
+        }
+        window.onload = ()=>{
+            const test = new Test(1,15)
+            test.render()
+        }
+    </script>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>

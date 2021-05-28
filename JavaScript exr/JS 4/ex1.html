@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function avarage(params) {
+            return params.reduce((res,x,i,arr)=>res+x) / params.length
+        }
+        function check(params) {
+            if(params.some(x => x == 2)) return "2";
+            if(params.some(x => x == 3)) return "3";
+            if(params.some(x => x == 4)) return "4";
+            return "5"
+        }
+        let arr = prompt("arr: ").split(" ").map((x,i,arr) => parseInt(x))
+        alert(`Avarage ${avarage(arr)}`)
+        alert(check(arr))
+    </script>
+</body>
+</html>

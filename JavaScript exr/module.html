@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Training{
+            constructor(minNumber, maxNumber){
+                this.minNumber = minNumber;
+                this.maxNumber = maxNumber;
+                this.inputs = []
+            }
+            getRandNum(minNumber, maxNumber){
+                minNumber = minNumber ?? this.minNumber
+                maxNumber = maxNumber ?? this.maxNumber
+                return minNumber+Math.floor(Math.random()*(maxNumber-minNumber+1))
+            }
+            getRandOperation(){
+                let operation = ["+", "-", "/", "*"]
+                return operation[this.getRandNum(0, operation.length -1 )]
+            }
+            generateTask(){
+                this.firstInput = this.inputs[0]
+                this.secondInput = this.inputs[1]
+                this.firstInput.value = this.getRandNum()
+                this.secondInput.value = this.getRandNum()
+                this.answerInput = this.inputs[2]
+                this.answerInput.value = ''
+                this.operation.innerText = this.getRandOperation()
+            }
+            checkResult(){
+                const firstInputNumber = parseInt(this.firstInput.value)
+                const secondInputNumber = parseInt(this.secondInput.value)
+                let res;
+                switch (this.operation.innerText) {
+                    case "+":
+                        res = firstInputNumber + secondInputNumber
+                        if (res == parseInt(this.answerInput.value)) {
+                            this.result.innerText = "Correct"
+                        }
+                        else{
+                            this.result.innerText = "Incorrect"
+                        }
+                        break;
+                    case "-":   
+                        res = firstInputNumber - secondInputNumber
+                        if (res == parseInt(this.answerInput.value)) {
+                            this.result.innerText = "Correct"
+                        }
+                        else{
+                            this.result.innerText = "Incorrect"
+                        }
+                        break;
+                    case "/":   
+                        res = firstInputNumber / secondInputNumber
+                        if (res == parseInt(this.answerInput.value)) {
+                            this.result.innerText = "Correct"
+                        }
+                        else{
+                            this.result.innerText = "Incorrect"
+                        }
+                        break;
+                    case "*":   
+                        res = firstInputNumber * secondInputNumber
+                        if (res == parseInt(this.answerInput.value)) {
+                            this.result.innerText = "Correct"
+                        }
+                        else{
+                            this.result.innerText = "Incorrect"
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            render(){
+                const createDiv = (labelText, mainDiv) => {
+                    const div = document.createElement('div');
+                    const label = document.createElement('label');
+                    label.innerText = labelText;
+                    div.appendChild(label);
+                    const inputName = document.createElement('input');
+                    this.inputs.push(inputName)
+                    div.appendChild(inputName)
+                    mainDiv.appendChild(div)
+                }
+                const container = document.getElementById('mainContainer') 
+                createDiv("First Number ", container)
+
+                let div1 = document.createElement('div')
+                div1.innerText = "Operation: "
+                this.operation = document.createElement('span')
+                div1.appendChild(this.operation)
+                container.appendChild(div1)
+
+                createDiv("Second Number ", container)
+
+                const hr = document.createElement('hr')
+                container.appendChild(hr)
+                
+                createDiv("Answer ", container)
+
+                div1 = document.createElement('div')
+                let btn = document.createElement('button')
+                btn.innerText = "Check"
+                btn.onclick = this.checkResult.bind(this)
+                div1.appendChild(btn)
+                container.appendChild(div1)
+
+                div1 = document.createElement('div')
+                div1.innerText = "Result:  "
+                this.result = document.createElement('span')
+                div1.appendChild(this.result)
+                container.appendChild(div1)
+
+                this.generateTask()
+
+                return container
+            }
+
+        }
+        window.onload = function() {
+            const training = new Training(1,15);
+            training.render()
+        }
+
+        </script>
+</head>
+<body>
+    <div id="mainContainer">
+        
+    </div>
+</body>
+</html>

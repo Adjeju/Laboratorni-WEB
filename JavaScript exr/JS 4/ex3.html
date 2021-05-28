@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        let a = ["Іван", "Petja","Іван"]
+        alert(a.reduce( (prev, x, i, arr) => {
+            if(x == "Іван") prev++
+            return prev
+        }, 0))
+    </script>
 </body>
 </html>
