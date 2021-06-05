@@ -21,6 +21,7 @@
                 div.appendChild(label)
                 let input = document.createElement('input')
                 input.setAttribute("data-destiny", "calc-value")
+                input.classList.add("numbers")
                 div.appendChild(input)
                 return div
             }
@@ -31,16 +32,15 @@
                 }
             }
             calculateSum(){
-                let getSum = (prev, x, i, arr) =>{
-                    prev += x
-                    return prev
-                }
                 const inputCollection = document.querySelectorAll("[data-destiny=calc-value]")
                 let arr = []
                 for(let i = 0; i < inputCollection.length - 1; i++){
                     arr.push(Number(inputCollection[i].value))
                 }
-                let sum = arr.reduce(getSum, 0)
+                let sum = arr.reduce((prev, x, i, arr) =>{
+                    prev += x
+                    return prev
+                }, 0)
                 inputCollection[3].value = sum
             }
             render(){
