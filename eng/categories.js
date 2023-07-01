@@ -36,7 +36,7 @@ export class Categories {
       subCategoryWrap.innerHTML = subCategory.title;
 
       subCategoryWrap.addEventListener('click', () => {
-        fetch('/files/' + subCategory.contentFileName)
+        fetch('./files/' + subCategory.contentFileName)
           .then((res) => res.text())
           .then(this.renderContent.bind(this, subCategories))
           .catch((e) => console.error(e));
