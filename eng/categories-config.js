@@ -1,29 +1,55 @@
 export const categoriesConfig = [
   {
-    id: 'mid-school',
-    title: 'Середня школа',
+    id: "primary-school",
+    title: "Початкова школа",
     subCategories: [
       {
-        title: 'Хуй 3 3',
-        contentFileName: 'some.md',
+        title: "Present simple",
+        contentFileName: "present-simple.md",
       },
       {
-        title: 'Хуй 4 4',
-        contentFileName: 'some.md',
+        title: "Present continuous",
+        contentFileName: "present-simple.md",
+      },
+      {
+        title: "Present Perfect",
+        contentFileName: "present-simple.md",
+      },
+      {
+        title: "Present Perfect Continuous",
+        contentFileName: "present-simple.md",
       },
     ],
   },
   {
-    id: 'low-school',
-    title: 'Low школа',
+    id: "secondary-school",
+    title: "Середня школа",
     subCategories: [
       {
-        title: 'Хуй 1',
-        contentFileName: 'some.md',
+        title: "Past Simple",
+        contentFileName: "present-simple.md",
       },
       {
-        title: 'Хуй 2',
-        contentFileName: 'some.md',
+        title: "Present Continuous",
+        contentFileName: "present-simple.md",
+      },
+    ],
+  },
+  {
+    id: "high-school",
+    title: "Старша школа",
+    subCategories: [
+      {
+        title: "Future Simple",
+        contentFileName: "present-simple.md",
+      },
+      {
+        title: "Future Continuous",
+        contentFileName: "present-simple.md",
+      },
+      {
+        title: "Future Perfect",
+        contentFileName: "present-simple.md",
       },
     ],
   },
